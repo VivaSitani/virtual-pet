@@ -8,7 +8,6 @@ input.onGesture(Gesture.Shake, function () {
         `)
     soundExpression.giggle.play()
 })
-
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     basic.showLeds(`
         . . . . .
@@ -19,7 +18,6 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
         `)
     soundExpression.happy.play()
 })
-
 let timer = 0
 basic.showLeds(`
     . . . . .
@@ -29,10 +27,9 @@ basic.showLeds(`
     . . . . .
     `)
 soundExpression.hello.play()
-
 basic.forever(function () {
-    basic.pause(1000)
-    timer = 1
+    basic.pause(500)
+    timer = timer + 1
     if (timer == 20) {
         basic.showLeds(`
             . . . . .
